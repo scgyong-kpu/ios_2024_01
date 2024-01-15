@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+struct TopButtonModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        return content
+            .background(Color.yellow)
+            .padding()
+            .background(Color.blue)
+    }
+}
+
 struct ContentView: View {
     @State var page = 1
     let totalPage = 5
@@ -18,9 +27,7 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "arrow.left.circle.fill")
                 }
-                .background(Color.yellow)
-                .padding()
-                .background(Color.blue)
+                .modifier(TopButtonModifier())
                 .disabled(page == 1)
                 Text("\(page)/\(totalPage)")
                     //.background(Color.blue)
@@ -30,9 +37,7 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "arrow.right.circle.fill")
                 }
-                .background(Color.yellow)
-                .padding()
-                .background(Color.blue)
+                .modifier(TopButtonModifier())
                 .disabled(page == totalPage)
             }
             .font(.largeTitle)
