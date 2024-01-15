@@ -14,22 +14,20 @@ struct ContentView: View {
         VStack {
             HStack {
                 Button {
-                    if page > 1 {
-                        page -= 1
-                    }
+                    page -= 1
                 } label: {
                     Image(systemName: "arrow.left.circle.fill")
                 }
+                .disabled(page == 1)
                 Text("\(page)/\(totalPage)")
                     //.background(Color.blue)
                     .frame(maxWidth: .infinity)
                 Button {
-                    if page < totalPage {
-                        page += 1
-                    }
+                    page += 1
                 } label: {
                     Image(systemName: "arrow.right.circle.fill")
                 }
+                .disabled(page == totalPage)
             }
             .font(.largeTitle)
             Image("cat\(page)")
