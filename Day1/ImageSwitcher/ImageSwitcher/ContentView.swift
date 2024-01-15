@@ -13,7 +13,9 @@ struct ContentView: View {
         VStack {
             HStack {
                 Button {
-                    page = 2
+                    if page > 1 {
+                        page -= 1
+                    }
                 } label: {
                     Image(systemName: "arrow.left.circle.fill")
                 }
@@ -21,7 +23,9 @@ struct ContentView: View {
                     //.background(Color.blue)
                     .frame(maxWidth: .infinity)
                 Button {
-                    page = 3
+                    if page < 5 {
+                        page += 1
+                    }
                 } label: {
                     Image(systemName: "arrow.right.circle.fill")
                 }
