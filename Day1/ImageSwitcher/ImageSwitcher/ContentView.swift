@@ -25,11 +25,12 @@ struct ContentView: View {
                 .background(Color.orange)
             HStack {
                 Image(systemName: "pencil.circle.fill")
-                    .font(.largeTitle)
                 Text("Pencil")
             }
+            .font(.largeTitle)
         }
         .padding()
+        .border(Color.blue)
     }
 }
 
