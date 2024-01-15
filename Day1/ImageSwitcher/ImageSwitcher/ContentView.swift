@@ -34,9 +34,9 @@ struct ContentView: View {
         VStack {
             HStack {
                 TopButton(isLeft: true)
+                Spacer()
                 Text("\(page)/\(totalPage)")
-                    //.background(Color.blue)
-                    .frame(maxWidth: .infinity)
+                Spacer()
                 TopButton(isLeft: false);
             }
             .font(.largeTitle)
