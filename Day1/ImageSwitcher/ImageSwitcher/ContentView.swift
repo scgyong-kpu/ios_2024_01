@@ -11,11 +11,24 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "arrow.left.circle.fill")
+                Button {
+                    print("Previous Button Pressed")
+                } label: {
+                    Image(systemName: "arrow.left.circle.fill")
+                }
                 Text("1/5")
-                Image(systemName: "arrow.right.circle.fill")
+                    //.background(Color.blue)
+                    .frame(maxWidth: .infinity)
+                Button {
+                    print("Next Button Pressed")
+                } label: {
+                    Image(systemName: "arrow.right.circle.fill")
+                }
             }
-            Image(systemName:"cat")
+            .font(.largeTitle)
+            Image("cat1")
+                .resizable()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .padding()
     }
