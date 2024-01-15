@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var page = 1
+    let totalPage = 5
     var body: some View {
         VStack {
             HStack {
@@ -19,11 +20,11 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "arrow.left.circle.fill")
                 }
-                Text("\(page)/5")
+                Text("\(page)/\(totalPage)")
                     //.background(Color.blue)
                     .frame(maxWidth: .infinity)
                 Button {
-                    if page < 5 {
+                    if page < totalPage {
                         page += 1
                     }
                 } label: {
