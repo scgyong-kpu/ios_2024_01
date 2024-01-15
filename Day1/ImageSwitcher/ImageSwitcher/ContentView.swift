@@ -18,6 +18,9 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "arrow.left.circle.fill")
                 }
+                .background(Color.yellow)
+                .padding()
+                .background(Color.blue)
                 .disabled(page == 1)
                 Text("\(page)/\(totalPage)")
                     //.background(Color.blue)
@@ -27,6 +30,9 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "arrow.right.circle.fill")
                 }
+                .background(Color.yellow)
+                .padding()
+                .background(Color.blue)
                 .disabled(page == totalPage)
             }
             .font(.largeTitle)
