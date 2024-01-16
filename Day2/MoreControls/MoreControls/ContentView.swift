@@ -10,23 +10,16 @@ import SwiftUI
 struct ContentView: View {
     @State var rotDegrees = 0.0
     @State var large = true
+    let names = [
+        "jkfe", "Hello", "World", "Kakaka", "Puhaha", "Kekeke",
+        "Hohoho", "Hihihi", "Kukuku"
+    ]
     var body: some View {
         VStack {
             List {
-                Text("Hello")
-                Text("World")
-                Text("Hello")
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-
-                Text("World")
-                Text("Hello")
-                Text("World")
-                Text("Hello")
-                Text("World")
-                Text("Hello")
-                Text("World")
+                ForEach(names, id: \.self) { name in
+                    Text("Name: \(name)")
+                }
             }
             Image(systemName: "arrow.right.circle")
                 .resizable()
