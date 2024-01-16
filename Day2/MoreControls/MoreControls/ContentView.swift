@@ -18,7 +18,10 @@ struct ContentView: View {
         VStack {
             List {
                 ForEach(names, id: \.self) { name in
-                    Text("Name: \(name)")
+                    HStack {
+                        Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
+                        Text("Name: \(name)")
+                    }
                 }
             }
             Image(systemName: "arrow.right.circle")
