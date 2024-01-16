@@ -13,14 +13,14 @@ struct ContentView: View {
         "Hohoho", "Hihihi", "Kukuku"
     ]
     var body: some View {
-            List {
-                ForEach(names, id: \.self) { name in
-                    HStack {
-                        Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
-                        Text("Name: \(name)")
-                    }
+        List {
+            ForEach(names, id: \.self) { name in
+                HStack {
+                    Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
+                    Text("Name: \(name)")
                 }
             }
+        }
     }
 }
 
