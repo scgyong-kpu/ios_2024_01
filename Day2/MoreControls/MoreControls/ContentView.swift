@@ -21,14 +21,7 @@ struct ContentView: View {
             List {
                 ForEach(names, id: \.self) { name in
                     NavigationLink {
-                        VStack {
-                            Image(systemName: "fan.desk")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                            Text(name)
-                        }
-                        .navigationTitle("Detail")
-                        .navigationBarTitleDisplayMode(.inline)
+                        ItemDetailView(name: name)
                     } label: {
                         ItemView(name: name)
                     }

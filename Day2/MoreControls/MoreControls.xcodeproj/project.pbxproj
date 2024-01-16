@@ -11,6 +11,7 @@
 		3D8F48392B5653B500B6AA26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8F48382B5653B500B6AA26 /* ContentView.swift */; };
 		3D8F483B2B5653B700B6AA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8F483A2B5653B700B6AA26 /* Assets.xcassets */; };
 		3D8F483E2B5653B700B6AA26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8F483D2B5653B700B6AA26 /* Preview Assets.xcassets */; };
+		3D8F48452B56704C00B6AA26 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8F48442B56704C00B6AA26 /* ItemDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		3D8F48382B5653B500B6AA26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D8F483A2B5653B700B6AA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D8F483D2B5653B700B6AA26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D8F48442B56704C00B6AA26 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				3D8F48382B5653B500B6AA26 /* ContentView.swift */,
 				3D8F483A2B5653B700B6AA26 /* Assets.xcassets */,
 				3D8F483C2B5653B700B6AA26 /* Preview Content */,
+				3D8F48442B56704C00B6AA26 /* ItemDetailView.swift */,
 			);
 			path = MoreControls;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8F48452B56704C00B6AA26 /* ItemDetailView.swift in Sources */,
 				3D8F48392B5653B500B6AA26 /* ContentView.swift in Sources */,
 				3D8F48372B5653B500B6AA26 /* MoreControlsApp.swift in Sources */,
 			);
