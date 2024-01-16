@@ -20,8 +20,9 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
                 .foregroundColor(.yellow)
+                .rotationEffect(.degrees(rotDegrees))
                 .shadow(color: .red, radius: 10, x: 10, y: 10)
-            Slider(value: $rotDegrees)
+            Slider(value: $rotDegrees, in: 0.0 ... 360.0)
                 .frame(width: 200)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
