@@ -16,8 +16,9 @@ struct ItemDetailView: View {
                 .aspectRatio(contentMode: .fit)
                 .padding()
             Text(name)
+                .font(.largeTitle)
         }
-        .navigationTitle("Detail")
+        .navigationTitle(name)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
