@@ -14,6 +14,11 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Image(systemName: "arrow.right.circle")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(.yellow)
+                .shadow(color: .red, radius: 10, x: 10, y: 10)
         }
         .padding()
     }
