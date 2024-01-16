@@ -14,7 +14,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world! \(rotDegrees)")
+            Text("Hello, world! \(String(format: "%3.1f", rotDegrees))")
             Image(systemName: "arrow.right.circle")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
