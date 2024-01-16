@@ -30,10 +30,7 @@ struct ContentView: View {
                         .navigationTitle("Detail")
                         .navigationBarTitleDisplayMode(.inline)
                     } label: {
-                        HStack {
-                            Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
-                            Text("Name: \(name)")
-                        }
+                        ItemView(name: name)
                     }
                 }
             }
@@ -44,4 +41,14 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+struct ItemView: View {
+    let name: String
+    var body: some View {
+        HStack {
+            Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
+            Text("Name: \(name)")
+        }
+    }
 }
