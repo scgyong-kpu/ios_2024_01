@@ -10,19 +10,25 @@ import SwiftUI
 struct ContentView: View {
     let names = [
         "jkfe", "Hello", "World", "Kakaka", "Puhaha", "Kekeke",
+        "Hohoho", "Hihihi", "Kukuku",
+        "jkfe", "Hello", "World", "Kakaka", "Puhaha", "Kekeke",
+        "Hohoho", "Hihihi", "Kukuku",
+        "jkfe", "Hello", "World", "Kakaka", "Puhaha", "Kekeke",
         "Hohoho", "Hihihi", "Kukuku"
-    ]
+   ]
     var body: some View {
         NavigationView {
             List {
                 ForEach(names, id: \.self) { name in
                     NavigationLink {
                         VStack {
-                            Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
+                            Image(systemName: "fan.desk")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             Text(name)
                         }
+                        .navigationTitle("Detail")
+                        .navigationBarTitleDisplayMode(.inline)
                     } label: {
                         HStack {
                             Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
@@ -31,6 +37,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("Worlds")
         }
     }
 }
