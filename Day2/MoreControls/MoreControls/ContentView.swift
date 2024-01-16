@@ -16,9 +16,18 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(names, id: \.self) { name in
-                    HStack {
-                        Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
-                        Text("Name: \(name)")
+                    NavigationLink {
+                        VStack {
+                            Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            Text(name)
+                        }
+                    } label: {
+                        HStack {
+                            Image(systemName: "pencil.tip.crop.circle.badge.arrow.forward")
+                            Text("Name: \(name)")
+                        }
                     }
                 }
             }
