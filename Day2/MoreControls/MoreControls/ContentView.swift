@@ -22,6 +22,7 @@ struct ContentView: View {
                 //.frame(width: large ? 200 : 100, height: 200)
                 .foregroundColor(.yellow)
                 .scaleEffect(large ? 1.0 : 0.5)
+                .animation(.linear(duration: 0.3), value: large ? 1.0 : 0.5)
                 .rotationEffect(.degrees(rotDegrees))
                 .shadow(color: .red, radius: 10, x: 10, y: 10)
             Slider(value: $rotDegrees, in: 0.0 ... 360.0)
