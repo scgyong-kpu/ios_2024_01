@@ -17,13 +17,14 @@ struct CountryDetailView: View {
                 .padding(.horizontal, 100)
             Text(country.name)
         }
+        .navigationTitle(country.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    CountryDetailView(country: Region.all[0].countries[0])
+    NavigationView {
+        CountryDetailView(country: Region.all[0].countries[0])
+    }
 }
 
-#Preview {
-    CountryDetailView(country: Region.all[1].countries[2])
-}
