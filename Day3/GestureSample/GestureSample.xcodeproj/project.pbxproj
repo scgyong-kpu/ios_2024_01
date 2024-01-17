@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D4A911D2B57B87C006D2FC8 /* GestureSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A911C2B57B87C006D2FC8 /* GestureSampleApp.swift */; };
-		3D4A911F2B57B87C006D2FC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A911E2B57B87C006D2FC8 /* ContentView.swift */; };
+		3D4A911F2B57B87C006D2FC8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A911E2B57B87C006D2FC8 /* MainView.swift */; };
 		3D4A91212B57B87F006D2FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4A91202B57B87F006D2FC8 /* Assets.xcassets */; };
 		3D4A91242B57B87F006D2FC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4A91232B57B87F006D2FC8 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		3D4A91192B57B87C006D2FC8 /* GestureSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4A911C2B57B87C006D2FC8 /* GestureSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureSampleApp.swift; sourceTree = "<group>"; };
-		3D4A911E2B57B87C006D2FC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3D4A911E2B57B87C006D2FC8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3D4A91202B57B87F006D2FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D4A91232B57B87F006D2FC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				3D4A911C2B57B87C006D2FC8 /* GestureSampleApp.swift */,
-				3D4A911E2B57B87C006D2FC8 /* ContentView.swift */,
+				3D4A911E2B57B87C006D2FC8 /* MainView.swift */,
 				3D4A91202B57B87F006D2FC8 /* Assets.xcassets */,
 				3D4A91222B57B87F006D2FC8 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D4A911F2B57B87C006D2FC8 /* ContentView.swift in Sources */,
+				3D4A911F2B57B87C006D2FC8 /* MainView.swift in Sources */,
 				3D4A911D2B57B87C006D2FC8 /* GestureSampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
