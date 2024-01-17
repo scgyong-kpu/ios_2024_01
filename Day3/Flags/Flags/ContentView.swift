@@ -10,17 +10,21 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         List {
-            HStack {
-                Image("argentina")
-                Text("Argentina")
+            Section("South America") {
+                HStack {
+                    Image("argentina")
+                    Text("Argentina")
+                }
             }
-            HStack {
-                Image("south_korea")
-                Text("South Korea")
-            }
-            HStack {
-                Image("hong_kong")
-                Text("香港")
+            Section("East Asia") {
+                HStack {
+                    Image("south_korea")
+                    Text("South Korea")
+                }
+                HStack {
+                    Image("hong_kong")
+                    Text("香港")
+                }
             }
         }
     }
