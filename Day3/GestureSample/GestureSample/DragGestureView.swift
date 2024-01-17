@@ -7,14 +7,23 @@
 
 import SwiftUI
 
+func + (a: CGSize, b: CGSize) -> CGSize {
+    CGSize(
+        width: a.width + b.width,
+        height: a.height + b.height
+    )
+}
+
 struct DragGestureView: View {
     @State var globePos = CGSize.zero
+    @State var globeFinal = CGSize.zero
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .font(.largeTitle)
                 .scaleEffect(3.0)
-                .offset(globePos)
+                .offset(globeFinal + globePos)
                 .foregroundStyle(.blue)
                 .gesture(
                     DragGesture()
@@ -23,6 +32,7 @@ struct DragGestureView: View {
                             globePos = value.translation
                         }
                         .onEnded { value in
+                            globeFinal = globeFinal + globePos
                             globePos = .zero
                         }
                 )
