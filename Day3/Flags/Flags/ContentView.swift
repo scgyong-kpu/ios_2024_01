@@ -14,7 +14,11 @@ struct ContentView: View {
                 ForEach(Region.all, id: \.title) { rgn in
                     Section(rgn.title) {
                         ForEach(rgn.countries, id: \.name) { cntr in
-                            CountryItemView(country: cntr)
+                            NavigationLink {
+                                CountryDetailView(country: cntr)
+                            } label: {
+                                CountryItemView(country: cntr)
+                            }
                         }
                     }
                 }
