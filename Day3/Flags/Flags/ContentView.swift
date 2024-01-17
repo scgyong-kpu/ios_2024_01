@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image("argentina")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            Text("Argentina")
+        List {
+            HStack {
+                Image("argentina")
+                Text("Argentina")
+            }
+            HStack {
+                Image("south_korea")
+                Text("South Korea")
+            }
+            HStack {
+                Image("hong_kong")
+                Text("香港")
+            }
         }
-        .padding()
     }
 }
 
