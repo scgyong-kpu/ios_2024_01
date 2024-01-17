@@ -16,6 +16,12 @@ struct CountryDetailView: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(.horizontal, 100)
             Text(country.name)
+            List {
+                ForEach(0..<country.name.count, id: \.self) { idx in
+                    let str = country.name.prefix(idx+1)
+                    Text(str)
+                }
+            }
         }
         .navigationTitle(country.name)
         .navigationBarTitleDisplayMode(.inline)
