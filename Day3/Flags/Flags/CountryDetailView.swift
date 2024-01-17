@@ -10,7 +10,13 @@ import SwiftUI
 struct CountryDetailView: View {
     let country: Country
     var body: some View {
-        Text(country.name)
+        VStack {
+            Image(country.file)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(.horizontal, 100)
+            Text(country.name)
+        }
     }
 }
 
