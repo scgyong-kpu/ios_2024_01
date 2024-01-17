@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct TapGestureView: View {
+    @State var count: Int = 0
     var body: some View {
         VStack {
-            Text("Tap Me!")
+            Text("Tap Me! \(count)")
                 .font(.largeTitle)
                 .foregroundStyle(.blue)
                 .frame(maxWidth: .infinity)
@@ -19,7 +20,8 @@ struct TapGestureView: View {
                 .gesture(
                     TapGesture()
                         .onEnded {
-                            print("Tapped !!")
+                            //print("Tapped !!")
+                            count += 1
                         }
                 )
         }
