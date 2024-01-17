@@ -16,6 +16,12 @@ struct TapGestureView: View {
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(Color.yellow)
+                .gesture(
+                    TapGesture()
+                        .onEnded {
+                            print("Tapped !!")
+                        }
+                )
         }
         .navigationTitle("Tap Gesture")
         .navigationBarTitleDisplayMode(.inline)
