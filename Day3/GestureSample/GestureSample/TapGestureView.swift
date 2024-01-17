@@ -24,6 +24,9 @@ struct TapGestureView: View {
                 .onTapGesture {
                     count += 1
                 }
+                .onLongPressGesture {
+                    count += 10
+                }
 //                .gesture(
 //                    TapGesture()
 //                        .onEnded {
