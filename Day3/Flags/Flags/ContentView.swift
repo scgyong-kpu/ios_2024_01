@@ -15,7 +15,17 @@ struct ContentView: View {
                     ForEach(rgn.countries, id: \.name) { cntr in
                         HStack {
                             Image(cntr.file)
-                            Text(cntr.name)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 60)
+                            VStack {
+                                Text(cntr.name)
+                                    .font(.title)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                Text("\(cntr.name.count) million people")
+                                    .foregroundColor(.gray)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                           }
                         }
                     }
                 }
