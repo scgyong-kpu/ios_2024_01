@@ -29,6 +29,7 @@ struct TopButton: View {
 
 struct ContentView: View {
     @State var page = 1
+    
     let totalPage = 5
     var body: some View {
         VStack {
