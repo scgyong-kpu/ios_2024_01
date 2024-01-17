@@ -9,14 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        List {
-            ForEach(Region.all, id: \.title) { rgn in
-                Section(rgn.title) {
-                    ForEach(rgn.countries, id: \.name) { cntr in
-                        CountryItemView(country: cntr)
+        NavigationView {
+            List {
+                ForEach(Region.all, id: \.title) { rgn in
+                    Section(rgn.title) {
+                        ForEach(rgn.countries, id: \.name) { cntr in
+                            CountryItemView(country: cntr)
+                        }
                     }
                 }
             }
+            .navigationTitle("AppStore Countries")
         }
     }
 }
