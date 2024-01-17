@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct DragGestureView: View {
+    @State var globePos = CGSize.zero
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .font(.largeTitle)
                 .scaleEffect(3.0)
-                .offset(CGSize(width: 100, height: -300))
+                .offset(globePos)
                 .foregroundStyle(.blue)
                 .gesture(
                     DragGesture()
                         .onChanged { value in
-                            print("TR=\(value.translation)")
+                            //print("TR=\(value.translation)")
+                            globePos = value.translation
                         }
                 )
         }
