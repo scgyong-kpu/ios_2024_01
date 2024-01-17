@@ -8,22 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    let latinAmericaRegion = Region.all[3]
     var body: some View {
         List {
-            Section("South America") {
-                HStack {
-                    Image("argentina")
-                    Text("Argentina")
-                }
-            }
-            Section("East Asia") {
-                HStack {
-                    Image("south_korea")
-                    Text("South Korea")
-                }
-                HStack {
-                    Image("hong_kong")
-                    Text("香港")
+            Section(latinAmericaRegion.title) {
+                ForEach(latinAmericaRegion.countries, id: \.name) { cntr in
+                    HStack {
+                        Image(cntr.file)
+                        Text(cntr.file)
+                    }
                 }
             }
         }
