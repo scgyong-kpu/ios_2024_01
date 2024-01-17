@@ -12,6 +12,7 @@
 		3D4A91212B57B87F006D2FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4A91202B57B87F006D2FC8 /* Assets.xcassets */; };
 		3D4A91242B57B87F006D2FC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4A91232B57B87F006D2FC8 /* Preview Assets.xcassets */; };
 		3D4A912B2B57B9D5006D2FC8 /* TapGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A912A2B57B9D5006D2FC8 /* TapGestureView.swift */; };
+		3D4A912D2B57C0BB006D2FC8 /* DragGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A912C2B57C0BB006D2FC8 /* DragGestureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		3D4A91202B57B87F006D2FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D4A91232B57B87F006D2FC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D4A912A2B57B9D5006D2FC8 /* TapGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureView.swift; sourceTree = "<group>"; };
+		3D4A912C2B57C0BB006D2FC8 /* DragGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				3D4A91202B57B87F006D2FC8 /* Assets.xcassets */,
 				3D4A91222B57B87F006D2FC8 /* Preview Content */,
 				3D4A912A2B57B9D5006D2FC8 /* TapGestureView.swift */,
+				3D4A912C2B57C0BB006D2FC8 /* DragGestureView.swift */,
 			);
 			path = GestureSample;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4A912D2B57C0BB006D2FC8 /* DragGestureView.swift in Sources */,
 				3D4A911F2B57B87C006D2FC8 /* MainView.swift in Sources */,
 				3D4A911D2B57B87C006D2FC8 /* GestureSampleApp.swift in Sources */,
 				3D4A912B2B57B9D5006D2FC8 /* TapGestureView.swift in Sources */,
