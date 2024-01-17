@@ -9,9 +9,13 @@ import SwiftUI
 
 struct TapGestureView: View {
     @State var count: Int = 0
+    var countString: String {
+        if count == 0 { return "" }
+        return "\(count)"
+    }
     var body: some View {
         VStack {
-            Text("Tap Me! \(count)")
+            Text("Tap Me! \(countString)")
                 .font(.largeTitle)
                 .foregroundStyle(.blue)
                 .frame(maxWidth: .infinity)
