@@ -22,6 +22,9 @@ struct DragGestureView: View {
                             //print("TR=\(value.translation)")
                             globePos = value.translation
                         }
+                        .onEnded { value in
+                            globePos = .zero
+                        }
                 )
         }
         .navigationTitle("Drag")
