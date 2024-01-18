@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AnimView: View {
-    @State var spinning = true
+    @State var spinning = false
     @State var angle = Angle.zero
     var body: some View {
         VStack {
@@ -18,8 +18,13 @@ struct AnimView: View {
                 .foregroundStyle(.purple)
                 .rotationEffect(angle)
                 .animation(
-                    .linear(duration: 1.0)
-                    .repeatForever(autoreverses: false),
+                    spinning ? 
+                        Animation
+                        .linear(duration: 1.0)
+                        .repeatForever(autoreverses: false)
+                    :
+                        Animation
+                        .default,
                     value: angle
                 )
                 .padding()
@@ -30,9 +35,15 @@ struct AnimView: View {
                     .font(.title)
             })
             .frame(width: 200)
+            .onChange(of: spinning) { oldValue, newValue in
+                angle = .degrees(spinning ? 360 : 0)
+                print(spinning, angle)
+            }
         }
         .onAppear {
+            spinning = true
             angle = .degrees(spinning ? 360 : 0)
+            print("onAppear", spinning, angle)
         }
         .navigationTitle("Animation")
         .navigationBarTitleDisplayMode(.inline)
