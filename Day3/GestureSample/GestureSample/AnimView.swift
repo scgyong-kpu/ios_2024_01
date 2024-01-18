@@ -10,10 +10,21 @@ import SwiftUI
 struct AnimView: View {
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Image(systemName: "arrow.clockwise.circle")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .foregroundStyle(.purple)
+                .rotationEffect(.degrees(90))
+                .padding()
+            Toggle(isOn: .constant(true), label: {
+                Text("Spins")
+                    .font(.title)
+            })
+            .frame(width: 200)
         }
         .navigationTitle("Animation")
-        .navigationBarTitleDisplayMode(.inline)    }
+        .navigationBarTitleDisplayMode(.inline)
+    }
 }
 
 #Preview {
