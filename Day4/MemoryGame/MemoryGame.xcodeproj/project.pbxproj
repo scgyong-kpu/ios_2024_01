@@ -60,13 +60,13 @@
 			isa = PBXGroup;
 			children = (
 				3D13C7042B58E50600F6F91B /* MemoryGameApp.swift */,
+				3D13C7182B5913D300F6F91B /* MenuView.swift */,
 				3D13C7062B58E50600F6F91B /* GameView.swift */,
+				3D13C7162B58F06000F6F91B /* GameModel.swift */,
+				3D13C7142B58EAB300F6F91B /* GridStackView.swift */,
+				3D13C7122B58E6F500F6F91B /* CardView.swift */,
 				3D13C7082B58E50900F6F91B /* Assets.xcassets */,
 				3D13C70A2B58E50900F6F91B /* Preview Content */,
-				3D13C7122B58E6F500F6F91B /* CardView.swift */,
-				3D13C7142B58EAB300F6F91B /* GridStackView.swift */,
-				3D13C7162B58F06000F6F91B /* GameModel.swift */,
-				3D13C7182B5913D300F6F91B /* MenuView.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
