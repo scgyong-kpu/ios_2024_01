@@ -14,6 +14,7 @@
 		3D13C7132B58E6F500F6F91B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C7122B58E6F500F6F91B /* CardView.swift */; };
 		3D13C7152B58EAB300F6F91B /* GridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C7142B58EAB300F6F91B /* GridStackView.swift */; };
 		3D13C7172B58F06000F6F91B /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C7162B58F06000F6F91B /* GameModel.swift */; };
+		3D13C7192B5913D300F6F91B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C7182B5913D300F6F91B /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3D13C7122B58E6F500F6F91B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3D13C7142B58EAB300F6F91B /* GridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackView.swift; sourceTree = "<group>"; };
 		3D13C7162B58F06000F6F91B /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		3D13C7182B5913D300F6F91B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				3D13C7122B58E6F500F6F91B /* CardView.swift */,
 				3D13C7142B58EAB300F6F91B /* GridStackView.swift */,
 				3D13C7162B58F06000F6F91B /* GameModel.swift */,
+				3D13C7182B5913D300F6F91B /* MenuView.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D13C7172B58F06000F6F91B /* GameModel.swift in Sources */,
+				3D13C7192B5913D300F6F91B /* MenuView.swift in Sources */,
 				3D13C7072B58E50600F6F91B /* GameView.swift in Sources */,
 				3D13C7152B58EAB300F6F91B /* GridStackView.swift in Sources */,
 				3D13C7132B58E6F500F6F91B /* CardView.swift in Sources */,
