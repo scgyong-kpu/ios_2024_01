@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct AnimView: View {
+    @State var spinning = false
     var body: some View {
         VStack {
             Image(systemName: "arrow.clockwise.circle")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .foregroundStyle(.purple)
-                .rotationEffect(.degrees(90))
+                .rotationEffect(.degrees(spinning ? 90 : 0))
                 .padding()
-            Toggle(isOn: .constant(true), label: {
+            Toggle(isOn: $spinning, label: {
                 Text("Spins")
                     .font(.title)
             })
