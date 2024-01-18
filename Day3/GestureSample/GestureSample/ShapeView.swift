@@ -48,9 +48,18 @@ struct ShapeView: View {
                 .padding()
             GeometryReader { gr in
                 Path { g in // Graphics
-                    g.move(to: CGPoint(x: gr.size.width / 2, y: 0))
-                    g.addLine(to: CGPoint(x: 0, y: gr.size.height))
-                    g.addLine(to: CGPoint(x: gr.size.width, y: gr.size.height))
+                    let width = gr.size.width
+                    let halfWidth = width / 2
+                    let height = gr.size.height
+                    g.move(to: CGPoint(x: halfWidth, y: 0))
+                    g.addQuadCurve(
+                        to: CGPoint(x: halfWidth, y: height),
+                        control: CGPoint(x: 0, y: height)
+                    )
+                    g.addQuadCurve(
+                        to: CGPoint(x: halfWidth, y: 0),
+                        control: CGPoint(x: width, y: height)
+                    )
                    g.closeSubpath()
                 }
                 .fill(
