@@ -26,10 +26,15 @@ struct CardView: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .onReceive(timer) { _ in
+                if card.open != true {
+                    timer.upstream.connect().cancel()
+                    return
+                }
                 frameIndex += 1
                 if frameIndex > 8 {
                     frameIndex = 1
                 }
+                //print("num=\(card.number) frame=\(frameIndex)")
             }
     }
 }
