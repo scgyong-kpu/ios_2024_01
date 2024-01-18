@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct GameView: View {
+    var model = GameModel()
     var body: some View {
         VStack {
-            GridStackView(columns: 3, rows: 5) { row, col in
-                CardView(prefix: "f", number: row+col+1, open: row % 2 == 0)
+            GridStackView(columns: GameModel.cols, rows: GameModel.rows) { row, col in
+                CardView(prefix: "f", card: model.card(row: row, col: col))
             }
         }
         .padding()
