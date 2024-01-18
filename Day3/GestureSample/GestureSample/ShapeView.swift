@@ -46,25 +46,11 @@ struct ShapeView: View {
             Ellipse()
                 .frame(width: 100, height: 50)
                 .padding()
-            GeometryReader { gr in
-                Path { g in // Graphics
-                    let width = gr.size.width
-                    let halfWidth = width / 2
-                    let height = gr.size.height
-                    g.move(to: CGPoint(x: halfWidth, y: 0))
-                    g.addQuadCurve(
-                        to: CGPoint(x: halfWidth, y: height),
-                        control: CGPoint(x: 0, y: height)
-                    )
-                    g.addQuadCurve(
-                        to: CGPoint(x: halfWidth, y: 0),
-                        control: CGPoint(x: width, y: height)
-                    )
-                   g.closeSubpath()
-                }
-                .fill(
-                    LinearGradient(colors: [ .white, .blue ], startPoint: .topLeading, endPoint: .bottom)
-                )
+            WaterDrop()
+            HStack {
+                WaterDrop()
+                WaterDrop()
+                WaterDrop()
             }
         }
         .navigationTitle("Drawings")
@@ -75,5 +61,30 @@ struct ShapeView: View {
 #Preview {
     NavigationView {
         ShapeView()
+    }
+}
+
+struct WaterDrop: View {
+    var body: some View {
+        GeometryReader { gr in
+            Path { g in // Graphics
+                let width = gr.size.width
+                let halfWidth = width / 2
+                let height = gr.size.height
+                g.move(to: CGPoint(x: halfWidth, y: 0))
+                g.addQuadCurve(
+                    to: CGPoint(x: halfWidth, y: height),
+                    control: CGPoint(x: 0, y: height)
+                )
+                g.addQuadCurve(
+                    to: CGPoint(x: halfWidth, y: 0),
+                    control: CGPoint(x: width, y: height)
+                )
+                g.closeSubpath()
+            }
+            .fill(
+                LinearGradient(colors: [ .white, .blue ], startPoint: .topLeading, endPoint: .bottom)
+            )
+        }
     }
 }
