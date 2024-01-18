@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     let prefix: String
     let card: Card
+    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var frameIndex = 1
     var imgResName: String {
         guard let open = card.open else {
@@ -24,7 +25,7 @@ struct CardView: View {
         Image(imgResName)
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .onTapGesture {
+            .onReceive(timer) { _ in
                 frameIndex += 1
                 if frameIndex > 8 {
                     frameIndex = 1
