@@ -43,9 +43,14 @@ struct ShapeView: View {
                 g.addLine(to: CGPoint(x: 100, y: 200))
                 g.addLine(to: CGPoint(x: 200, y: 100))
                 g.addLine(to: CGPoint(x: 150, y: 50))
-                g.closeSubpath()
+                //g.closeSubpath()
             }
-            .stroke(lineWidth: 5)
+            .stroke(style: StrokeStyle(
+                lineWidth: 3,
+                lineCap: .round,
+                lineJoin: .bevel,
+                dash: [20, 10, 10, 10]
+            ))
             .fill(.blue)
         }
         .navigationTitle("Drawings")
