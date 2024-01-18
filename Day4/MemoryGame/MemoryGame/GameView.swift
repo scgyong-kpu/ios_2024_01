@@ -14,6 +14,14 @@ struct GameView: View {
     var body: some View {
         VStack {
             Spacer()
+            HStack {
+                Text("Memory Game")
+                    .font(.largeTitle)
+                Spacer()
+                Text("Flips: \(model.flips)")
+            }
+            .padding(.horizontal)
+            Spacer()
             GridStackView(columns: GameModel.cols, rows: GameModel.rows) { row, col in
                 CardView(
                     prefix: "f",

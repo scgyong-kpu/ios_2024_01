@@ -17,7 +17,8 @@ class GameModel: ObservableObject {
     static let rows = 6
     
     @Published var cards = [Card]()
-    
+    @Published var flips = 0
+
     var openCardIndex: Int?
     
     init() {
@@ -32,6 +33,7 @@ class GameModel: ObservableObject {
         }
         //cards.shuffle()
         openCardIndex = nil
+        flips = 0
     }
     func card(row: Int, col: Int) -> Card {
         let index = row * Self.cols + col
@@ -53,6 +55,7 @@ class GameModel: ObservableObject {
         }
         cards[index].open = true
         openCardIndex = index
+        flips += 1
     }
 }
 
