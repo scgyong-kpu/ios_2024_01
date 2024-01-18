@@ -10,6 +10,7 @@
 		3D13C6F12B58B59800F6F91B /* RotationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C6F02B58B59800F6F91B /* RotationGestureView.swift */; };
 		3D13C6F32B58B5BC00F6F91B /* ScaleGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C6F22B58B5BC00F6F91B /* ScaleGestureView.swift */; };
 		3D13C6F52B58B88F00F6F91B /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C6F42B58B88F00F6F91B /* ShapeView.swift */; };
+		3D13C6F72B58CC1700F6F91B /* AnimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C6F62B58CC1700F6F91B /* AnimView.swift */; };
 		3D4A911D2B57B87C006D2FC8 /* GestureSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A911C2B57B87C006D2FC8 /* GestureSampleApp.swift */; };
 		3D4A911F2B57B87C006D2FC8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A911E2B57B87C006D2FC8 /* MainView.swift */; };
 		3D4A91212B57B87F006D2FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4A91202B57B87F006D2FC8 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		3D13C6F02B58B59800F6F91B /* RotationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureView.swift; sourceTree = "<group>"; };
 		3D13C6F22B58B5BC00F6F91B /* ScaleGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleGestureView.swift; sourceTree = "<group>"; };
 		3D13C6F42B58B88F00F6F91B /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		3D13C6F62B58CC1700F6F91B /* AnimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimView.swift; sourceTree = "<group>"; };
 		3D4A91192B57B87C006D2FC8 /* GestureSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4A911C2B57B87C006D2FC8 /* GestureSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureSampleApp.swift; sourceTree = "<group>"; };
 		3D4A911E2B57B87C006D2FC8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				3D13C6F02B58B59800F6F91B /* RotationGestureView.swift */,
 				3D13C6F22B58B5BC00F6F91B /* ScaleGestureView.swift */,
 				3D13C6F42B58B88F00F6F91B /* ShapeView.swift */,
+				3D13C6F62B58CC1700F6F91B /* AnimView.swift */,
 			);
 			path = GestureSample;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4A912D2B57C0BB006D2FC8 /* DragGestureView.swift in Sources */,
+				3D13C6F72B58CC1700F6F91B /* AnimView.swift in Sources */,
 				3D13C6F32B58B5BC00F6F91B /* ScaleGestureView.swift in Sources */,
 				3D13C6F12B58B59800F6F91B /* RotationGestureView.swift in Sources */,
 				3D4A911F2B57B87C006D2FC8 /* MainView.swift in Sources */,

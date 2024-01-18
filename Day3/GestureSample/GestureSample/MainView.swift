@@ -40,6 +40,7 @@ struct MainView: View {
                         Text("Shapes")
                     }
                     NavigationLink {
+                        AnimView()
                     } label: {
                         Text("Animation")
                     }
