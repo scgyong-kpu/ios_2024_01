@@ -30,6 +30,14 @@ struct ShapeView: View {
                 .padding(.horizontal)
             Capsule()
                 .stroke(lineWidth: 10)
+                .fill(
+                    RadialGradient(
+                        colors: [ .yellow, .red ],
+                        center: .center,
+                        startRadius: 0,
+                        endRadius: 200
+                    )
+                )
                 .frame(height: 50)
                 .padding(.horizontal)
                 .padding(.top)
