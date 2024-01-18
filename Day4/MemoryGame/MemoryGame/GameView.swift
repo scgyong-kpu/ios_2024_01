@@ -39,6 +39,16 @@ struct GameView: View {
             }
             Spacer()
         }
+        .alert(isPresented: .constant(true)) {
+            Alert(
+                title: Text("Restart"),
+                message: Text("Do you really want to restart this game?"),
+                primaryButton: .destructive(Text("Restart")) {
+                    model.start()
+                },
+                secondaryButton: .cancel()
+            )
+        }
     }
 }
 
