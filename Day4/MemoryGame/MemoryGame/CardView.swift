@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct CardView: View {
+    let prefix: String
+    let number: Int
     var body: some View {
-        Image("f_01_01")
+        Image(String(format: "\(prefix)_%02d_01", number))
             .resizable()
             .aspectRatio(contentMode: .fit)
     }
 }
 
 #Preview {
-    CardView()
+    VStack {
+        ForEach(1...8, id: \.self) { num in
+            CardView(prefix: "f", number: num)
+        }
+    }
 }
