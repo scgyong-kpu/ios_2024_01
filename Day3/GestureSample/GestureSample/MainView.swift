@@ -22,12 +22,12 @@ struct MainView: View {
                     Text("Drag")
                 }
                 NavigationLink {
-                    //RotationGestureView()
+                    RotationGestureView()
                 } label: {
                     Text("Rotation")
                 }
                 NavigationLink {
-                    //ScaleGestureView()
+                    ScaleGestureView()
                 } label: {
                     Text("Scale")
                 }
