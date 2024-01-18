@@ -13,15 +13,17 @@ struct Card {
 }
 
 class GameModel: ObservableObject {
-    static let cols = 2
-    static let rows = 3
+    static let cols = 3
+    static let rows = 6
     
     @Published var cards = [Card]()
+    
+    var openCardIndex: Int?
     
     init() {
         let max = Self.cols * Self.rows / 2
         for n in 1...max {
-            cards.append(Card(number: n, open: true))
+            cards.append(Card(number: n, open: false))
             cards.append(Card(number: n, open: false))
         }
     }
@@ -31,10 +33,14 @@ class GameModel: ObservableObject {
     }
     func toggle(row: Int, col: Int) {
         let index = row * Self.cols + col
-        let card = cards[index]
-        if let open = card.open {
-            cards[index].open = !open
+        if index == openCardIndex {
+            return
         }
+        if let openCardIndex = openCardIndex {
+            cards[openCardIndex].open = false
+        }
+        cards[index].open = true
+        openCardIndex = index
     }
 }
 
