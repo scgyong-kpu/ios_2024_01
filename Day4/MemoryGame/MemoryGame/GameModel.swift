@@ -12,12 +12,11 @@ struct Card {
     var open: Bool? // nil == removed
 }
 
-struct GameModel {
+class GameModel: ObservableObject {
     static let cols = 2
     static let rows = 3
     
-    var cards = [Card]()
-    //var cards: [Card] = []
+    @Published var cards = [Card]()
     
     init() {
         let max = Self.cols * Self.rows / 2
@@ -29,6 +28,13 @@ struct GameModel {
     func card(row: Int, col: Int) -> Card {
         let index = row * Self.cols + col
         return cards[index]
+    }
+    func toggle(row: Int, col: Int) {
+        let index = row * Self.cols + col
+        let card = cards[index]
+        if let open = card.open {
+            cards[index].open = !open
+        }
     }
 }
 
