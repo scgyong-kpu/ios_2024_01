@@ -36,6 +36,7 @@ struct CardView: View {
                 }
                 //print("num=\(card.number) frame=\(frameIndex)")
             }
+            .opacity(card.open == nil ? 0.0 : 1.0)
     }
 }
 
