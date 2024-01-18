@@ -10,8 +10,15 @@ import SwiftUI
 struct CardView: View {
     let prefix: String
     let number: Int
+    let open: Bool
+    var imgResName: String {
+        if !open {
+            return "\(prefix)_back"
+        }
+        return String(format: "\(prefix)_%02d_01", number)
+    }
     var body: some View {
-        Image(String(format: "\(prefix)_%02d_01", number))
+        Image(imgResName)
             .resizable()
             .aspectRatio(contentMode: .fit)
     }
@@ -20,7 +27,11 @@ struct CardView: View {
 #Preview {
     VStack {
         ForEach(1...8, id: \.self) { num in
-            CardView(prefix: "f", number: num)
+            HStack {
+                CardView(prefix: "f", number: num, open: true)
+                CardView(prefix: "f", number: num, open: false)
+                CardView(prefix: "t", number: num, open: false)
+            }
         }
     }
 }
