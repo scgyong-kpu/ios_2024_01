@@ -46,20 +46,17 @@ struct ShapeView: View {
             Ellipse()
                 .frame(width: 100, height: 50)
                 .padding()
-            Path { g in // Graphics
-                g.move(to: .zero)
-                g.addLine(to: CGPoint(x: 100, y: 200))
-                g.addLine(to: CGPoint(x: 200, y: 100))
-                g.addLine(to: CGPoint(x: 150, y: 50))
-                //g.closeSubpath()
+            GeometryReader { gr in
+                Path { g in // Graphics
+                    g.move(to: CGPoint(x: gr.size.width / 2, y: 0))
+                    g.addLine(to: CGPoint(x: 0, y: gr.size.height))
+                    g.addLine(to: CGPoint(x: gr.size.width, y: gr.size.height))
+                   g.closeSubpath()
+                }
+                .fill(
+                    LinearGradient(colors: [ .white, .blue ], startPoint: .topLeading, endPoint: .bottom)
+                )
             }
-            .stroke(style: StrokeStyle(
-                lineWidth: 3,
-                lineCap: .round,
-                lineJoin: .bevel,
-                dash: [20, 10, 10, 10]
-            ))
-            .fill(.blue)
         }
         .navigationTitle("Drawings")
         .navigationBarTitleDisplayMode(.inline)
