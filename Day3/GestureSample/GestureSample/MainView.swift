@@ -11,25 +11,37 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink {
-                    TapGestureView()
-                } label: {
-                    Text("Tap & LongPress")
+                Section("Gesture") {
+                    NavigationLink {
+                        TapGestureView()
+                    } label: {
+                        Text("Tap & LongPress")
+                    }
+                    NavigationLink {
+                        DragGestureView()
+                    } label: {
+                        Text("Drag")
+                    }
+                    NavigationLink {
+                        RotationGestureView()
+                    } label: {
+                        Text("Rotation")
+                    }
+                    NavigationLink {
+                        ScaleGestureView()
+                    } label: {
+                        Text("Scale")
+                    }
                 }
-                NavigationLink {
-                    DragGestureView()
-                } label: {
-                    Text("Drag")
-                }
-                NavigationLink {
-                    RotationGestureView()
-                } label: {
-                    Text("Rotation")
-                }
-                NavigationLink {
-                    ScaleGestureView()
-                } label: {
-                    Text("Scale")
+                Section("Others") {
+                    NavigationLink {
+                    } label: {
+                        Text("Shapes")
+                    }
+                    NavigationLink {
+                    } label: {
+                        Text("Animation")
+                    }
                 }
             }
             .navigationTitle("Gestures Test")
