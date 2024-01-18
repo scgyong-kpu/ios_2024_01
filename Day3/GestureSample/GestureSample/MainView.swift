@@ -35,6 +35,7 @@ struct MainView: View {
                 }
                 Section("Others") {
                     NavigationLink {
+                        ShapeView()
                     } label: {
                         Text("Shapes")
                     }
