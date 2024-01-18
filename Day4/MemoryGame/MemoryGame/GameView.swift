@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView: View {
     @ObservedObject var model = GameModel()
     @State var showsRetryAlert = false
-    
+    @Environment(\.presentationMode) var present
     var body: some View {
         VStack {
             Spacer()
@@ -35,7 +35,7 @@ struct GameView: View {
             HStack {
                 Spacer()
                 Button {
-                    
+                    present.wrappedValue.dismiss()
                 } label: {
                     Text("Back")
                         .font(.title)
