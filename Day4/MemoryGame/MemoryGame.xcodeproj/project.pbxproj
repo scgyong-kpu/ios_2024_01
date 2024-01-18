@@ -11,6 +11,7 @@
 		3D13C7072B58E50600F6F91B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C7062B58E50600F6F91B /* GameView.swift */; };
 		3D13C7092B58E50900F6F91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D13C7082B58E50900F6F91B /* Assets.xcassets */; };
 		3D13C70C2B58E50900F6F91B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D13C70B2B58E50900F6F91B /* Preview Assets.xcassets */; };
+		3D13C7132B58E6F500F6F91B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13C7122B58E6F500F6F91B /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		3D13C7062B58E50600F6F91B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3D13C7082B58E50900F6F91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D13C70B2B58E50900F6F91B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D13C7122B58E6F500F6F91B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				3D13C7062B58E50600F6F91B /* GameView.swift */,
 				3D13C7082B58E50900F6F91B /* Assets.xcassets */,
 				3D13C70A2B58E50900F6F91B /* Preview Content */,
+				3D13C7122B58E6F500F6F91B /* CardView.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D13C7072B58E50600F6F91B /* GameView.swift in Sources */,
+				3D13C7132B58E6F500F6F91B /* CardView.swift in Sources */,
 				3D13C7052B58E50600F6F91B /* MemoryGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

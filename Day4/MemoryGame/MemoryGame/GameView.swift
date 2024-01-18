@@ -13,6 +13,7 @@ struct GameView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+            Image("f_01_01")
             Text("Hello, world!")
         }
         .padding()
