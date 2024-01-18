@@ -16,6 +16,10 @@ struct AnimView: View {
                 .aspectRatio(contentMode: .fit)
                 .foregroundStyle(.purple)
                 .rotationEffect(.degrees(spinning ? 90 : 0))
+                .animation(
+                    .linear(duration: 1.0),
+                    value: spinning ? 90 : 0
+                )
                 .padding()
             Toggle(isOn: $spinning, label: {
                 Text("Spins")
