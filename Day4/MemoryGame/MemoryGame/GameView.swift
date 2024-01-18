@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var model = GameModel()
-
+    @State var showsRetryAlert = false
+    
     var body: some View {
         VStack {
             Spacer()
@@ -25,7 +26,8 @@ struct GameView: View {
             Spacer()
             HStack {
                 Button {
-                    model.start()
+                    //model.start()
+                    showsRetryAlert = true
                 } label: {
                     Text("Restart")
                         .font(.title)
@@ -39,7 +41,7 @@ struct GameView: View {
             }
             Spacer()
         }
-        .alert(isPresented: .constant(true)) {
+        .alert(isPresented: $showsRetryAlert) {
             Alert(
                 title: Text("Restart"),
                 message: Text("Do you really want to restart this game?"),
