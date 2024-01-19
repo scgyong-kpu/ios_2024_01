@@ -33,6 +33,11 @@ class PoiDataStore: ObservableObject {
                 print("No data from task. \(err)")
                 return
             }
+            do {
+                let res = try JSONDecoder().decode(PoiAPIResult.self, from: data)
+            } catch {
+                print(error)
+            }
             guard let apiResult = try? JSONDecoder().decode(PoiAPIResult.self, from: data) else {
                 print("Parse failed. \(String(data: data, encoding: .utf8))")
                 return

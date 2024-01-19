@@ -48,14 +48,14 @@ struct Row: Codable {
     let sigunNm: String?
     let sigunCD: String?
     let bizplcNm, licensgDe, bsnStateNm: String?
-    let clsbizDe, locplcAr, gradFacltDivNm: JSONNull?
+    let clsbizDe, locplcAr, gradFacltDivNm: String?
     let maleEnflpsnCnt: Int?
-    let yy, multiUseBizestblYn, gradDivNm, totFacltScale: JSONNull?
+    let yy, multiUseBizestblYn, gradDivNm, totFacltScale: String?
     let femaleEnflpsnCnt: Int?
     let bsnsiteCircumfrDivNm: String?
-    let sanittnIndutypeNm: JSONNull?
+    let sanittnIndutypeNm: String?
     let sanittnBizcondNm: String?
-    let totEmplyCnt: JSONNull?
+    let totEmplyCnt: Int?
     let refineLotnoAddr, refineRoadnmAddr, refineZipCD, refineWgs84Logt: String?
     let refineWgs84Lat: String?
 
