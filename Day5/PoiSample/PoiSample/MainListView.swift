@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct MainListView: View {
+    @ObservedObject var poiDataStore = PoiDataStore.shared
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                List {
+//                    ForEach() {
+//                        
+//                    }
+                    Text("Poi Item")
+                }
+            }
+            .navigationTitle("Fast Foods")
+            .onAppear {
+                poiDataStore.startLoading()
+            }
         }
-        .padding()
     }
 }
 

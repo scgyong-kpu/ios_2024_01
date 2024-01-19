@@ -18,6 +18,10 @@ class PoiDataStore: ObservableObject {
 
     static let shared = PoiDataStore()
     private init() {}
+    
+    func startLoading() {
+        
+    }
 }
 
 
