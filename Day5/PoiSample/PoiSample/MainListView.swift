@@ -14,7 +14,11 @@ struct MainListView: View {
             VStack {
                 List {
                     ForEach(poiDataStore.items) { poi in
-                        PoiItemView(poi: poi)
+                        NavigationLink {
+                            PoiDetailView(poi: poi)
+                        } label: {
+                            PoiItemView(poi: poi)
+                        }
                     }
                 }
             }
