@@ -20,7 +20,31 @@ class PoiDataStore: ObservableObject {
     private init() {}
     
     func startLoading() {
-        
+        let strUrl = "\(Const.baseUrl)?Type=json&Key=\(Const.key)"
+        NSLog("Loading: \(strUrl)")
+        guard let url = URL(string: strUrl) else {
+            print("Failed to build url")
+            return
+        }
+//        urlString -> url -> request -> DataTask -> resume - data/error
+//        let data = Data(contentsOf: url)
+        let task = URLSession.shared.dataTask(with: url) { data, resp, err in
+            guard let data = data else {
+                print("No data from task. \(err)")
+                return
+            }
+            guard let apiResult = try? JSONDecoder().decode(PoiAPIResult.self, from: data) else {
+                print("Parse failed. \(String(data: data, encoding: .utf8))")
+                return
+            }
+            guard let pois = apiResult.genrestrtfastfood?[0].row else {
+                print("No data from server")
+                return
+            }
+            NSLog("\(pois.count) items loaded")
+            self.items = pois
+        }
+        task.resume()
     }
 }
 
