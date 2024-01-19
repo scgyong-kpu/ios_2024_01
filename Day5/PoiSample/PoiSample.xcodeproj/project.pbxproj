@@ -13,6 +13,7 @@
 		3DB1FB222B5A2EB600C50ED2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB1FB212B5A2EB600C50ED2 /* Preview Assets.xcassets */; };
 		3DB1FB292B5A2F4300C50ED2 /* PoiDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB1FB282B5A2F4300C50ED2 /* PoiDataStore.swift */; };
 		3DB1FB2B2B5A314A00C50ED2 /* PoiApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB1FB2A2B5A314A00C50ED2 /* PoiApiResult.swift */; };
+		3DB1FB2D2B5A4F5200C50ED2 /* PoiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB1FB2C2B5A4F5200C50ED2 /* PoiDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		3DB1FB212B5A2EB600C50ED2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3DB1FB282B5A2F4300C50ED2 /* PoiDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiDataStore.swift; sourceTree = "<group>"; };
 		3DB1FB2A2B5A314A00C50ED2 /* PoiApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiApiResult.swift; sourceTree = "<group>"; };
+		3DB1FB2C2B5A4F5200C50ED2 /* PoiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				3DB1FB202B5A2EB600C50ED2 /* Preview Content */,
 				3DB1FB282B5A2F4300C50ED2 /* PoiDataStore.swift */,
 				3DB1FB2A2B5A314A00C50ED2 /* PoiApiResult.swift */,
+				3DB1FB2C2B5A4F5200C50ED2 /* PoiDetailView.swift */,
 			);
 			path = PoiSample;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB1FB2D2B5A4F5200C50ED2 /* PoiDetailView.swift in Sources */,
 				3DB1FB292B5A2F4300C50ED2 /* PoiDataStore.swift in Sources */,
 				3DB1FB1D2B5A2EB400C50ED2 /* MainListView.swift in Sources */,
 				3DB1FB1B2B5A2EB400C50ED2 /* PoiSampleApp.swift in Sources */,
