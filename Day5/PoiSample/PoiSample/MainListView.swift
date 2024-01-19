@@ -13,9 +13,9 @@ struct MainListView: View {
         NavigationView {
             VStack {
                 List {
-//                    ForEach() {
-//                        
-//                    }
+                    ForEach(poiDataStore.items) { poi in
+                        Text(poi.bizplcNm ?? "")
+                    }
                     Text("Poi Item")
                 }
             }

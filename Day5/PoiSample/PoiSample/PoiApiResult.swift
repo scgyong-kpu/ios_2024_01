@@ -44,7 +44,8 @@ struct Result: Codable {
 }
 
 // MARK: - Row
-struct Row: Codable {
+struct Row: Codable, Identifiable {
+    let id = UUID()
     let sigunNm: String?
     let sigunCD: String?
     let bizplcNm, licensgDe, bsnStateNm: String?
