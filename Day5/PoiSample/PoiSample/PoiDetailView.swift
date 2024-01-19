@@ -6,9 +6,20 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PoiDetailView: View {
     let poi: PoiItem
+//    @State var camPos: MapCameraPosition
+//    init(poi: PoiItem) {
+//        self.poi = poi
+//        let lat = CLLocationDegrees(poi.refineWgs84Lat ?? "0")!
+//        let lon = CLLocationDegrees(poi.refineWgs84Logt ?? "0")!
+//        let center = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+//        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+//        let region = MKCoordinateRegion(center: center, span: span)
+//        camPos = MapCameraPosition.region(region)
+//    }
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading) {
@@ -22,6 +33,15 @@ struct PoiDetailView: View {
                     Image(systemName: "phone.circle")
                         .resizable()
                         .frame(width: 32, height: 32)
+                    Button {
+                        let us = "tel://1588-3820"
+                        guard let url = URL(string: us) else {
+                            return
+                        }
+                        UIApplication.shared.open(url)
+                    } label: {
+                        Text("1588-3820")
+                    }
                     Text("1588-3820")
                 }
                 HStack {
@@ -36,6 +56,9 @@ struct PoiDetailView: View {
                         .frame(width: 32, height: 32)
                     Text(poi.refineRoadnmAddr ?? "")
                 }
+//                Map {
+//                    Marker(poi.bizplcNm ?? "", coordinate: poi.location)
+//                }
            }
         }
         .navigationTitle(poi.bizplcNm ?? "")
@@ -51,6 +74,11 @@ struct PoiDetailView: View {
 
 
 extension PoiItem {
+    var location: CLLocationCoordinate2D {
+        let lat = CLLocationDegrees(self.refineWgs84Lat ?? "0")!
+        let lon = CLLocationDegrees(self.refineWgs84Logt ?? "0")!
+        return  CLLocationCoordinate2D(latitude: lat, longitude: lon)
+    }
     static func fromJson(json: String) -> PoiItem {
         let decoder = JSONDecoder()
         let data = json.data(using: .utf8)!
