@@ -21,6 +21,15 @@ class GameModel: ObservableObject {
 
     var openCardIndex: Int?
     
+    var over: Bool {
+        for c in cards {
+            if c.open != nil {
+                return false
+            }
+        }
+        return true
+    }
+    
     init() {
         start()
     }
@@ -31,7 +40,7 @@ class GameModel: ObservableObject {
             cards.append(Card(number: n, open: false))
             cards.append(Card(number: n, open: false))
         }
-        cards.shuffle()
+//        cards.shuffle()
         openCardIndex = nil
         flips = 0
     }

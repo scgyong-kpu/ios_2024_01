@@ -30,6 +30,9 @@ struct GameView: View {
                 )
                 .onTapGesture {
                     model.toggle(row: row, col: col)
+                    if model.over {
+                        showsRetryAlert = true
+                    }
                 }
             }
             Spacer()
