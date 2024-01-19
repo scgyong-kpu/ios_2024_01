@@ -44,7 +44,10 @@ class PoiDataStore: ObservableObject {
                 return
             }
             NSLog("\(pois.count) items loaded")
-            self.items = pois
+            OperationQueue.main.addOperation {
+                NSLog("Publishing")
+                self.items = pois
+            }
         }
         task.resume()
     }
