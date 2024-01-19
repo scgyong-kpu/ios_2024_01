@@ -31,7 +31,8 @@ struct CardView: View {
                     return
                 }
                 frameIndex += 1
-                if frameIndex > 8 {
+                let img = UIImage(named: imgResName)
+                if img == nil {
                     frameIndex = 1
                 }
                 //print("num=\(card.number) frame=\(frameIndex)")

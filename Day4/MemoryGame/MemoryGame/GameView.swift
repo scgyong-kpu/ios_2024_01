@@ -91,5 +91,5 @@ struct GameView: View {
 }
 
 #Preview {
-    GameView(prefix: "t")
+    GameView(prefix: "z")
 }
