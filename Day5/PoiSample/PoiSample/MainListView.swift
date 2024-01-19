@@ -14,9 +14,8 @@ struct MainListView: View {
             VStack {
                 List {
                     ForEach(poiDataStore.items) { poi in
-                        Text(poi.bizplcNm ?? "")
+                        PoiItemView(poi: poi)
                     }
-                    Text("Poi Item")
                 }
             }
             .navigationTitle("Fast Foods")
@@ -29,4 +28,11 @@ struct MainListView: View {
 
 #Preview {
     MainListView()
+}
+
+struct PoiItemView: View {
+    let poi: PoiItem
+    var body: some View {
+        Text(poi.bizplcNm ?? "")
+    }
 }
