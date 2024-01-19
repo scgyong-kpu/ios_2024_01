@@ -20,15 +20,9 @@ class GameModel: ObservableObject {
     @Published var flips = 0
 
     var openCardIndex: Int?
+    private var pairCount = 0
     
-    var over: Bool {
-        for c in cards {
-            if c.open != nil {
-                return false
-            }
-        }
-        return true
-    }
+    var over: Bool { pairCount == 0 }
     
     init() {
         start()
@@ -43,6 +37,7 @@ class GameModel: ObservableObject {
 //        cards.shuffle()
         openCardIndex = nil
         flips = 0
+        pairCount = max
     }
     func card(row: Int, col: Int) -> Card {
         let index = row * Self.cols + col
@@ -58,6 +53,7 @@ class GameModel: ObservableObject {
                 cards[oci].open = nil
                 cards[index].open = nil
                 openCardIndex = nil
+                pairCount -= 1
                 return
             }
             cards[oci].open = false
