@@ -39,7 +39,7 @@ class PoiDataStore: ObservableObject {
                 return
             }
             
-            guard let pois = apiResult.genrestrtfastfood?[1].row else {
+            guard let pois = apiResult.genrestrtfastfood?[1].row as? [PoiItem] else {
                 print("No data from server")
                 return
             }
