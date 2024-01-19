@@ -30,19 +30,16 @@ class PoiDataStore: ObservableObject {
 //        let data = Data(contentsOf: url)
         let task = URLSession.shared.dataTask(with: url) { data, resp, err in
             guard let data = data else {
-                print("No data from task. \(err)")
+                print("No data from task.")
                 return
             }
-            do {
-                let res = try JSONDecoder().decode(PoiAPIResult.self, from: data)
-            } catch {
-                print(error)
-            }
+
             guard let apiResult = try? JSONDecoder().decode(PoiAPIResult.self, from: data) else {
-                print("Parse failed. \(String(data: data, encoding: .utf8))")
+                print("Parse failed.")
                 return
             }
-            guard let pois = apiResult.genrestrtfastfood?[0].row else {
+            
+            guard let pois = apiResult.genrestrtfastfood?[1].row else {
                 print("No data from server")
                 return
             }
