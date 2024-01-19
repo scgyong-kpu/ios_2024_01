@@ -19,18 +19,24 @@ struct PoiDetailView: View {
                     Text(poi.bizplcNm ?? "")
                 }
                 HStack {
-                    Image(systemName: "house.circle")
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                    Text(poi.refineRoadnmAddr ?? "")
-                }
-                HStack {
                     Image(systemName: "phone.circle")
                         .resizable()
                         .frame(width: 32, height: 32)
                     Text("1588-3820")
                 }
-            }
+                HStack {
+                    Image(systemName: "envelope.circle")
+                        .resizable()
+                        .frame(width: 32, height: 32)
+                    Text(poi.refineZipCD ?? "")
+                }
+                HStack {
+                    Image(systemName: "house.circle")
+                        .resizable()
+                        .frame(width: 32, height: 32)
+                    Text(poi.refineRoadnmAddr ?? "")
+                }
+           }
         }
         .navigationTitle(poi.bizplcNm ?? "")
         .navigationBarTitleDisplayMode(.inline)
